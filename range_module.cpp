@@ -18,7 +18,8 @@ public:
     }
 
     void addRange(int left, int right) {
-
+        splitePoints.push_back(std::pair<int, int>(left,right));
+        updateSplitePoints();
     }
 
     bool queryRange(int left, int right) {
@@ -29,10 +30,19 @@ public:
 
     }
 private:
-    vector<std::pair<int, int>> splitedPoints;
+    vector<std::pair<int, int>> splitePoints;
+
+    void updateSplitePoints() {
+        vector<std::pair<int, int>> newSplitePoints = new vector<std::pair<int, int>>;
+        vector<std::pair<int, int>>::iterator ix = splitePoints.begin();
+        for (; ix != splitePoints.end(); ix ++) {
+
+        }
+    }
 };
 
 
 RangeModule::RangeModule() {
-    splitedPoints = new vector<int>;
+    splitePoints = new vector<std::pair<int, int>>;
 }
+
