@@ -1,18 +1,23 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <sstream>
 
 using std::string;
 using std::cout;
 using std::endl;
+using std::stringstream;
 using std::vector;
 
 int main() {
-    string s(" abcdefg");
-    string a("");
-    a.push_back(' ');
-    if (a[0] == ' ') {
-        cout << "Hello" << endl;
-    }
-    return 0;
+    stringstream sstr;
+//--------int转string-----------
+    int a=1;
+    char  str[2];
+    string s("");
+    sstr<<a;
+    sstr>>str;
+    cout<<str<<endl;
+    s.push_back(str[0]);
+    cout << s << endl;
 }
